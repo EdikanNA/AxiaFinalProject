@@ -1,0 +1,368 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Heebo", sans-serif;
+}
+
+body {
+  
+  background: linear-gradient(to bottom, hsl(180, 52%, 96%) 0%, hsl(180, 31%, 95%) 50%, #fff 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+}
+
+.filter-bar {
+  max-width: 800px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px; /* Increased padding for mobile */
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.active-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.active-filter {
+  display: flex;
+  align-items: center;
+  background-color: hsl(180, 52%, 96%);
+  color: hsl(180, 29%, 50%);
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.filter-text {
+  padding: 5px 10px;
+}
+
+.remove-filter {
+  background-color: hsl(180, 29%, 50%);
+  color: #fff;
+  border: none;
+  padding: 8px 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  }
+
+.remove-filter:hover {
+  background-color: hsl(180, 14%, 20%);
+  cursor:pointer;
+}
+
+#clearFilters {
+  background-color: transparent;
+  border: none;
+  color: hsl(180, 14%, 20%);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#clearFilters:hover {
+  text-decoration: underline;
+  color: hsl(180, 29%, 50%);
+}
+
+.job-card {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  transition: transform 0.2s;
+}
+
+.job-card.featured {
+  border-left: 5px solid hsl(180, 14%, 20%);
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+}
+
+.logo {
+  margin-right: 20px;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.job-details {
+  flex: 1;
+}
+
+.company-tags {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.company {
+  font-size: 14px;
+  font-weight: bold;
+  color: hsl(180, 29%, 50%);
+  margin-right: 10px;
+}
+
+.tag {
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 30px;
+  margin-right: 5px;
+  text-transform: uppercase; /* Match the uppercase style in the image */
+}
+
+.tag.new {
+  background-color: hsl(180, 29%, 50%);
+}
+
+.tag.featured {
+  background-color: hsl(180, 14%, 20%);
+}
+
+.job-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: hsl(180, 14%, 20%);
+  margin-bottom: 10px;
+}
+
+.job-meta {
+  font-size: 14px;
+  color: hsl(180, 8%, 52%);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+}
+
+.job-meta span {
+  margin-right: 10px;
+}
+
+.meta-divider {
+  display: none;
+  width: 100%;
+  height: 1px;
+  background-color: hsl(180, 8%, 52%);
+  margin: 5px 0;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill {
+  background-color: hsl(180, 52%, 96%);
+  color: hsl(180, 29%, 50%);
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.skill:hover {
+  background-color: hsl(180, 29%, 50%);
+  color: #fff;
+}
+
+/* Mobile View (screens smaller than 768px) */
+@media (max-width: 768px) {
+  body {
+    padding: 15px; /* Adjusted padding for mobile */
+    background: hsl(180, 52%, 96%); /* Solid background color for mobile */
+  }
+
+  .container {
+    max-width: 100%; /* Ensure the container takes full width */
+  }
+
+  .filter-bar {
+    flex-direction: row; /* Keep the row layout for filter bar */
+    align-items: center;
+    padding: 15px 20px;
+    max-width: 100%; /* Ensure filter bar takes full width */
+  }
+
+  .active-filters {
+    margin-bottom: 0; /* Remove extra margin */
+  }
+
+  .active-filter {
+    font-size: 14px; /* Slightly larger for readability */
+  }
+
+  .filter-text {
+    padding: 6px 12px; /* Adjusted padding for better touch targets */
+  }
+
+  .remove-filter {
+    padding: 9px 10px;
+    font-size: 16px; /* Larger for better visibility */
+  }
+
+  #clearFilters {
+    align-self: center;
+    font-size: 14px;
+  }
+
+  .job-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    position: relative; /* For absolute positioning of elements if needed */
+  }
+
+  .job-card.featured {
+    border-left: 5px solid hsl(180, 29%, 50%);
+  }
+
+  .logo {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .logo img {
+    width: 80px; /* Larger logo as seen in the image */
+    height: 80px;
+  }
+
+  .job-details {
+    margin-bottom: 15px;
+    width: 100%; /* Ensure job details take full width */
+  }
+
+  .company-tags {
+    margin-bottom: 8px;
+  }
+
+  .company {
+    font-size: 16px; /* Slightly larger for mobile */
+  }
+
+  .tag {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .job-title {
+    font-size: 20px; /* Larger title for mobile */
+    margin-bottom: 10px;
+  }
+
+  .job-meta {
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .job-meta span {
+    margin-right: 8px;
+  }
+
+  .meta-divider {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .skills {
+    gap: 10px;
+    width: 100%; /* Ensure skills take full width */
+    justify-content: flex-start; /* Align skills to the left */
+  }
+
+  .skill {
+    font-size: 14px;
+    padding: 8px 12px; /* Larger padding for touch targets */
+  }
+}
+
+/* Extra small screens (below 412px) */
+@media (max-width: 412px) {
+  body {
+    padding: 10px;
+  }
+
+  .filter-bar {
+    padding: 10px 15px;
+  }
+
+  .active-filter {
+    font-size: 12px;
+  }
+
+  .filter-text {
+    padding: 5px 10px;
+  }
+
+  .remove-filter {
+    padding: 5px 8px;
+    font-size: 14px;
+  }
+
+  #clearFilters {
+    font-size: 12px;
+  }
+
+  .job-card {
+    padding: 15px;
+  }
+
+  .job-card.featured {
+    border-left: 4px solid hsl(180, 29%, 50%);
+  }
+
+  .logo img {
+    width: 70px; /* Slightly smaller for very small screens */
+    height: 70px;
+  }
+
+  .job-title {
+    font-size: 18px;
+  }
+
+  .job-meta {
+    font-size: 12px;
+  }
+
+  .meta-divider {
+    margin: 8px 0;
+  }
+
+  .skill {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
