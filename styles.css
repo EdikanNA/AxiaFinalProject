@@ -26,18 +26,18 @@ body {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 15px 20px; /* Increased padding for mobile */
+  padding: 15px 20px; 
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .active-filters {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
+
 
 .active-filter {
   display: flex;
@@ -49,11 +49,9 @@ body {
   border-radius: 5px;
   overflow: hidden;
 }
-
 .filter-text {
   padding: 5px 10px;
 }
-
 .remove-filter {
   background-color: hsl(180, 29%, 50%);
   color: #fff;
@@ -63,12 +61,10 @@ body {
   cursor: pointer;
   transition: background-color 0.2s;
   }
-
 .remove-filter:hover {
   background-color: hsl(180, 14%, 20%);
   cursor:pointer;
 }
-
 #clearFilters {
   background-color: transparent;
   border: none;
@@ -76,7 +72,6 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
-
 #clearFilters:hover {
   text-decoration: underline;
   color: hsl(180, 29%, 50%);
@@ -92,11 +87,9 @@ body {
   padding: 20px;
   transition: transform 0.2s;
 }
-
 .job-card.featured {
   border-left: 5px solid hsl(180, 14%, 20%);
 }
-
 .job-card:hover {
   transform: translateY(-5px);
 }
@@ -104,14 +97,12 @@ body {
 .logo {
   margin-right: 20px;
 }
-
 .logo img {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   object-fit: contain;
 }
-
 .job-details {
   flex: 1;
 }
@@ -136,7 +127,7 @@ body {
   padding: 5px 8px;
   border-radius: 30px;
   margin-right: 5px;
-  text-transform: uppercase; /* Match the uppercase style in the image */
+  text-transform: uppercase; 
 }
 
 .tag.new {
@@ -197,34 +188,36 @@ body {
   color: #fff;
 }
 
-/* Mobile View (screens smaller than 768px) */
+/* Mobile View for 768 sreens */
 @media (max-width: 768px) {
   body {
-    padding: 15px; /* Adjusted padding for mobile */
-    background: hsl(180, 52%, 96%); /* Solid background color for mobile */
+    padding: 15px; 
+    background: hsl(180, 52%, 96%); 
   }
 
+
+  
   .container {
-    max-width: 100%; /* Ensure the container takes full width */
+    max-width: 100%; 
   }
 
   .filter-bar {
-    flex-direction: row; /* Keep the row layout for filter bar */
+    flex-direction: row; 
     align-items: center;
     padding: 15px 20px;
-    max-width: 100%; /* Ensure filter bar takes full width */
+    max-width: 100%; 
   }
 
   .active-filters {
-    margin-bottom: 0; /* Remove extra margin */
+    margin-bottom: 0; 
   }
 
   .active-filter {
-    font-size: 14px; /* Slightly larger for readability */
+    font-size: 14px; 
   }
 
   .filter-text {
-    padding: 6px 12px; /* Adjusted padding for better touch targets */
+    padding: 6px 12px; 
   }
 
   .remove-filter {
@@ -254,13 +247,13 @@ body {
   }
 
   .logo img {
-    width: 80px; /* Larger logo as seen in the image */
+    width: 80px; 
     height: 80px;
   }
 
   .job-details {
     margin-bottom: 15px;
-    width: 100%; /* Ensure job details take full width */
+    width: 100%; 
   }
 
   .company-tags {
@@ -268,7 +261,7 @@ body {
   }
 
   .company {
-    font-size: 16px; /* Slightly larger for mobile */
+    font-size: 16px; 
   }
 
   .tag {
@@ -277,7 +270,7 @@ body {
   }
 
   .job-title {
-    font-size: 20px; /* Larger title for mobile */
+    font-size: 20px; 
     margin-bottom: 10px;
   }
 
@@ -299,17 +292,16 @@ body {
 
   .skills {
     gap: 10px;
-    width: 100%; /* Ensure skills take full width */
-    justify-content: flex-start; /* Align skills to the left */
+    width: 100%; 
+    justify-content: flex-start; 
   }
-
   .skill {
     font-size: 14px;
-    padding: 8px 12px; /* Larger padding for touch targets */
+    padding: 8px 12px; 
   }
 }
 
-/* Extra small screens (below 412px) */
+/* For smaller screens */
 @media (max-width: 412px) {
   body {
     padding: 10px;
@@ -345,7 +337,7 @@ body {
   }
 
   .logo img {
-    width: 70px; /* Slightly smaller for very small screens */
+    width: 70px; 
     height: 70px;
   }
 
